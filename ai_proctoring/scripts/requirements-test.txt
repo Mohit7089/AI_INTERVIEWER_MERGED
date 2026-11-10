@@ -1,0 +1,4 @@
+# Extra dependencies for scripts/webcam_test_client.py only.
+# The core service (requirements.txt) does not need these.
+requests==2.32.3
+websocket-client==1.8.0

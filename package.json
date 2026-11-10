@@ -1,0 +1,32 @@
+{
+  "name": "ai_interviewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "resume": "cd resume-analyzer-api && ./venv/bin/python app.py",
+    "proctoring": "cd ai_proctoring && ./.venv/bin/python -m uvicorn main:app --host 0.0.0.0 --port 8001 --reload",
+    "confidence": "cd Audio_Confidence && ./venv/bin/python main.py",
+    "dev": "concurrently -k -n CLIENT,SERVER,RESUME,PROCTOR,AUDIO -c blue,green,yellow,magenta,red \"npm run client\" \"npm run server\" \"npm run resume\" \"npm run proctoring\" \"npm run confidence\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brahmananda-bhoi/AI_INTERVIEWER.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/brahmananda-bhoi/AI_INTERVIEWER/issues"
+  },
+  "homepage": "https://github.com/brahmananda-bhoi/AI_INTERVIEWER#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  },
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.3"
+  }
+}

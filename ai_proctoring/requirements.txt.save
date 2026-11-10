@@ -1,0 +1,29 @@
+mediapipe==0.10z# === AI Interview Proctoring & Behavioral Analysis Service ===
+# Core web framework
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-multipart==0.0.19
+websockets==13.1
+pydantic==2.9.2
+pydantic-settings==2.6.1
+
+# Computer vision
+opencv-python-headless==4.10.0.84
+mediapipe==0.10.18
+numpy==1.26.4
+scipy==1.13.1
+
+# Optional object detection (lazy-loaded, service degrades gracefully without it)
+ultralytics==8.3.40
+
+# Database
+motor==3.6.0          # async MongoDB driver
+pymongo==4.9.2
+
+# Reporting
+reportlab==4.2.5
+matplotlib==3.9.2
+
+# Utilities
+python-dotenv==1.0.1
+loguru==0.7.2
